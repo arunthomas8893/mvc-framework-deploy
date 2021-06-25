@@ -1,0 +1,1134 @@
+@import "_variables.scss";
+@import "_breakpoints.scss";
+@import "_functions.scss";
+
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/*page animation*/
+.page {
+  animation-name: page;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+}
+
+@keyframes page {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*page animation end*/
+#pageTopMargin {
+  margin-top: 7rem;
+}
+
+.sectionContainer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.innerSection {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $sectionMaxWidth;
+}
+
+.heading {
+  width: 100%;
+  display: block;
+  color: $textGray;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.subHeading {
+  color: $color2;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.boldContent {
+  font-weight: 600;
+}
+
+.smallText {
+  font-size: $fontMob-1;
+  color: $textGray;
+  font-family: 400;
+  margin-top: .5rem;
+}
+
+.buttonSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(5px);
+  }
+}
+
+.button1 {
+  color: $white;
+  background-color: $color1;
+}
+
+.button2 {
+  color: $color1;
+  background-color: $white;
+  border: 1px solid $color1;
+}
+
+.button3 {
+  color: $white;
+  background-color: $black;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+}
+
+.button4 {
+  color: $white;
+  background-color: $color1;
+}
+
+.button5 {
+  color: $gray;
+  background-color: $borderGray;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+}
+
+.button6 {
+  color: $gray;
+  background-color: $white;
+  border: 1px solid $borderGray;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+}
+
+/*Slide Drop Div*/
+.slideDropDiv {
+  width: 100%;
+  display: flex;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+
+  .activeDrop {
+    span {
+      background-color: $textGray !important;
+    }
+  }
+
+  .slideDrop {
+    width: 12px;
+    height: 12px;
+    padding: 2px;
+    margin: 0 0.3rem;
+    border-radius: 12px;
+    border: 1px solid $textGray;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      border: 1px solid $color1;
+
+      span {
+        background-color: $color1 !important;
+      }
+    }
+
+    span {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      border-radius: 10px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+  }
+}
+
+/*Main Container*/
+#mainContainer {
+  width: 100%;
+  background-color: $white;
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+
+  //header Section//
+  #headerSection {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+
+    .logoDiv {
+      display: inline-block;
+      width: 10rem;
+      cursor: pointer;
+
+      @include media-lg {
+        width: 13rem;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    #menuIcon {
+      display: flex;
+
+      a {
+        display: flex;
+        align-items: center;
+        width: 20px;
+        margin-left: 1rem;
+        cursor: pointer;
+        transition: all 0.7s;
+
+        @include media-md {
+          margin-left: 2rem;
+        }
+
+        &:hover {}
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  //header Section End//
+  //Footer Section//
+  #footerSection {
+    background-color: $lightGray;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    #footerMainSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      .hoverNone {
+        &:hover {
+          color: $textGray !important;
+          cursor: inherit;
+        }
+      }
+
+      .footerList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include media-md {
+          width: 25%;
+          margin: 0;
+          text-align: left;
+        }
+
+        @include media-lg {
+          width: 20%;
+        }
+
+        a {
+          color: $gray;
+          font-size: $fontMob-1;
+          font-weight: 400;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+    }
+
+    #footerBottomSection {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      margin-top: 1rem;
+
+      #bottomDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media-lg {
+          flex-direction: row;
+        }
+
+        .bottomList {
+          display: flex;
+          margin-bottom: 0.5rem;
+
+          @include media-lg {
+            margin: 0;
+          }
+
+          p {
+            color: $darkGray;
+            font-size: $fontMob-1;
+            font-weight: 700;
+            transition: all 0.3s;
+
+            @include media-lg {
+              margin-right: 1rem;
+            }
+
+            &:hover {}
+          }
+        }
+
+        .bottomSmMainDiv {
+          display: flex;
+          flex-direction: column;
+
+          @include media-lg {
+            flex-direction: row;
+          }
+
+          .smDiv {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+
+            @include media-lg {
+              margin: 0;
+            }
+
+            a {
+              width: 20px;
+              cursor: pointer;
+              transition: all 0.3s;
+              margin: 0 0.5rem;
+
+              @include media-lg {
+                margin-left: 0.5rem;
+              }
+
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+
+          .paymentIconDiv {
+            display: flex;
+
+            margin-bottom: 0.5rem;
+
+            @include media-lg {
+              margin: 0;
+              margin-left: 3rem;
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              width: 30px;
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Footer Section End//
+}
+
+/*Main Container*/
+//Drop box Section//
+.dropBoxMainDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+
+  .dropBoxTitle {
+    color: $color1;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .dropBoxDiv {
+    text-align: left;
+    padding: 0 !important;
+    overflow: hidden;
+    border-bottom: 1px solid $borderGray;
+
+    .dropBox {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+      color: $textGray;
+      font-size: $baseline;
+      font-weight: 500;
+      background-color: $white;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      @include media-sm {
+        font-size: $font-5;
+      }
+
+      &:hover {
+        color: $color1;
+      }
+    }
+
+    .dropBoxRemoveIcon {
+      display: none;
+    }
+
+    .dropDownIcon {
+      width: 1rem;
+      margin-left: 1rem;
+    }
+
+    .dropBoxContentDivIntro {
+      height: auto !important;
+      overflow: auto !important;
+    }
+
+    .dropBoxContentDiv {
+      display: none;
+      width: 100%;
+      padding: 1rem 0;
+      border-top: 1px solid $color2 !important;
+
+      .dropBoxText {
+        font-weight: 300;
+      }
+
+      p {
+        margin: 0;
+        font-size: $font-5;
+        line-height: 160%;
+
+      }
+
+      .sublistDiv {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        margin-top: 2rem;
+
+        @include media-md {
+          padding-left: 1.5rem;
+        }
+
+        .sublistTitle {
+          font-weight: 500;
+        }
+
+        li {
+          font-size: $font-5;
+          font-weight: 300;
+          line-height: 160%;
+          margin-bottom: 1rem;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: -1rem;
+            top: 1rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $color2;
+            border-radius: 2rem;
+
+            @include media-md {
+              left: -1.5rem;
+            }
+          }
+        }
+      }
+
+      .dropBoxListButtonDiv {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+
+        .planButton {
+          background-color: $color2 !important;
+          margin-right: 2rem !important;
+        }
+
+        .button {
+          margin: 0;
+        }
+      }
+
+      .dropBoxListDiv {
+        padding-left: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        @include media-md {
+          padding-left: 1.5rem;
+        }
+
+        .dropBoxListTitle {
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+
+        li {
+          font-size: $font-5;
+          font-weight: 300;
+          line-height: 160%;
+          margin-bottom: 1rem;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: -1rem;
+            top: 0.65rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $color2;
+            border-radius: 2rem;
+
+            @include media-md {
+              left: -1.5rem;
+            }
+          }
+        }
+
+        .dropBoxListTitle {
+          font-weight: 500;
+          margin: 1rem 0;
+        }
+
+        .dropBoxCheckBox {
+          display: block;
+          padding-left: 1.5rem;
+          margin-bottom: 1rem;
+          cursor: pointer;
+          user-select: none;
+
+          &:hover input~.checkmark {
+            background-color: $white;
+          }
+
+          input {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+
+            &:checked~.checkmark {
+              background-color: $color2;
+
+              &:after {
+                display: block;
+              }
+            }
+          }
+
+          .checkmark {
+            position: absolute;
+            top: 0.2rem;
+            left: 0;
+            display: flex;
+            height: 1rem;
+            width: 1rem;
+            background-color: $borderGray;
+            border-radius: 100%;
+
+            &:after {
+              content: "";
+              display: none;
+              width: 0.5rem;
+              height: 0.5rem;
+              margin: auto;
+              border-radius: 100%;
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Drop Select box Section//
+
+.dropDownInputDiv {
+  width: 100%;
+  background-color: $white;
+
+  .dropDownInput {
+    width: 100%;
+    border: 1px solid $borderGray;
+    border-bottom: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include media-lg {}
+
+    .dropInput {
+      width: 100%;
+      border: none;
+      color: $darkGray;
+      font-family: $fontFamily;
+      font-size: $baseline;
+      font-weight: 600;
+      background-color: $white;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .dropArrow {
+      width: 8px;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+  }
+
+  .dropDownBoxIntro {
+    height: auto !important;
+    border: 1px solid $borderGray !important;
+  }
+
+  .dropDownBox {
+    width: 100%;
+    min-width: max-content;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    background-color: $white;
+    border: none;
+
+    .dropDownList {
+      font-family: $fontFamily;
+      font-size: $baseline;
+      font-weight: 600;
+      text-align: left;
+      padding: 0.5rem 1rem;
+      color: $darkGray;
+      background-color: $white;
+      cursor: pointer;
+      transition: all 0.1s;
+
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+}
+
+//Drop box Section End//
+.formSection {
+  .closeForm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    padding: 1rem;
+    cursor: pointer;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .formDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .lgDiv {
+    width: 100%;
+  }
+
+  .mdDiv {
+    width: 100%;
+
+    @include media-lg {
+      width: 48.5%;
+    }
+  }
+
+  .smDiv {
+    width: 100%;
+
+    @include media-lg {
+      width: 32%;
+    }
+  }
+
+  .xsDiv {
+    width: 48.5%;
+
+    @include media-lg {
+      width: 23%;
+    }
+  }
+
+  .imageDiv {
+    max-width: 300px;
+    max-height: 250px;
+    margin: 0 auto;
+    background-color: $borderGray;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    overflow: hidden;
+    text-align: center;
+    padding-top: calc((9 / 16) * 300px);
+    transition: all 0.3s;
+
+    @include media-lg {
+      padding-top: calc((9 / 16) * 100%);
+    }
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $darkGray;
+    }
+
+    .iconDiv {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        width: 50px;
+      }
+
+      .text {
+        font-size: $fontMob-1;
+        color: $gray;
+      }
+    }
+
+    input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .inputDiv {
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: $baseline;
+      font-family: inherit;
+      font-weight: 400;
+      background-color: $lightGray;
+      border-radius: 0.3rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      ::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &::placeholder {
+        font-size: $fontMob-1;
+        color: $gray;
+        font-family: inherit;
+      }
+
+      &:hover {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:active {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:focus {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:visited {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    textarea {
+      min-height: 100px;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .messageBox {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .box {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 25px;
+      max-width: 25px;
+      min-width: 25px;
+      height: 35px;
+      margin-top: 10px;
+      margin-right: 5px;
+      text-align: center;
+      font-size: $fontMob-1;
+      color: $textGray;
+      background-color: $lightGray;
+      background-image: url(../image/icon/downarrow-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+    }
+
+    &:hover::before {
+      color: $textGray;
+      background-color: $white;
+    }
+
+    &:active::before {
+      color: $textGray;
+      background-color: $white;
+    }
+
+    &:focus::before {
+      color: $textGray;
+      background-color: $white;
+    }
+
+    &:visited::before {
+      color: $textGray;
+      background-color: $white;
+    }
+
+    select {
+      background-color: $lightGray;
+      border: 1px solid transparent;
+      color: $gray;
+      padding: 1rem;
+      width: 100%;
+      font-family: inherit;
+      font-size: $fontMob-1;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      -webkit-appearance: button;
+      appearance: button;
+      outline: none;
+      border-radius: 0.3rem;
+      overflow: hidden;
+
+      &:hover {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:active {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:focus {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:visited {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      option {
+        padding: 30px;
+        background-color: $white;
+        border: 1px solid $lightGray;
+
+        &:hover {
+          font-size: $baseline;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  .dropDownInputDiv {
+    margin-bottom: 1rem;
+
+    .dropDownInput {
+      background-color: $lightGray;
+      border-radius: 0.3rem;
+
+      &:hover {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      &:active {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+          color: $black;
+        }
+      }
+
+      input {
+        color: $textGray;
+        background-color: transparent;
+
+        &::placeholder {
+          font-size: $fontMob-1;
+          font-weight: 400;
+          color: $textGray;
+          font-family: inherit;
+        }
+      }
+    }
+
+    .dropDownBox {
+      top: 50px;
+      position: absolute !important;
+
+      .dropDownList {
+        font-size: $fontMob-1;
+        color: $textGray;
+        border-bottom: 1px solid $lightGray;
+      }
+    }
+  }
+
+  .mainDetails {
+    width: 100%;
+
+    @include media-lg {
+      width: 30%;
+    }
+  }
+
+  .additionalDetails {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-lg {
+      width: 70%;
+      padding-left: 1rem;
+    }
+  }
+}
+
+//popup Section//
+.popupIntro {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.popupSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0808085e;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: opacity 0.7s ease-out;
+
+  .popup {
+    max-width: 700px;
+    background-color: $white;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+
+    @include media-lg {
+      padding: 1rem 2rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .logo {
+        width: 4rem;
+      }
+
+      .popupClose {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        cursor: pointer;
+
+        @include media-lg {
+          right: -1rem;
+        }
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .content {
+      text-align: center;
+
+      .buttonSection {
+        justify-content: center;
+        margin-top: 2rem;
+
+        .button {
+          min-width: 130px;
+          padding: 0.7rem 1rem !important;
+          margin: 0 0.5rem;
+          font-size: $fontMob-1 !important;
+        }
+      }
+    }
+  }
+}

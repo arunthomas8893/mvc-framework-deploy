@@ -1,0 +1,419 @@
+{%  extends "base.twig" %}
+
+{% block body %}
+	<!----Header Section End-->
+	<!---------------------Page Container Section---------------->
+	<!----Order Container-->
+		<section id="orderContainer" class="section sectionContainer"> <div
+			class="innerSection">
+			<!---order main Section-->
+			<div class="orderMain">
+				<div id="orderNav">
+					<div class="navfill navMenu">Check Out</div>
+					<span></span>
+					<div class="navfill navMenu">Shipping</div>
+					<span></span>
+					<div class="navActive navMenu">Payment</div>
+				</div>
+
+				<div
+					id="orderMainWrapper">
+					<!---Cart List-->
+					<div
+						class="paymentSection orderDiv">
+						<!---drop box Section-->
+						<div
+							id="paymentContainer" class="dropBoxMainDiv ">
+
+							<!---drop box-->
+							<div class="dropBoxDiv paymentList">
+								<div class="list">
+									<input type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+									<a class="dropBox">
+										CREDIT CARD
+										<div>
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+										</div>
+									</a>
+								</div>
+
+								<!---drop box Content-->
+								<div class="dropBoxContentDiv">
+									<form
+										class="formDiv" action="">
+
+										<!---Input Divt-->
+										<div class="inputDiv lgDiv">
+											<select class="box" name="" id="">
+												<option value="">Select Bank</option>
+												<option value="">Bank</option>
+											</select>
+											<span class="messageBox"></span>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv smDiv">
+											<label for="">Name on Card</label>
+											<input type="text" id="cardName" name="card-name">
+											<span class="messageBox"></span>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv mdDiv">
+											<label for="">Card Number</label>
+											<input type="text" id="cardNumber" name="card-number">
+											<span class="messageBox"></span>
+										</div>
+										<div class="smDiv">
+											<label class="lgDiv" for="">Expiration date</label>
+											<div
+												style="display: flex;">
+												<!---Input Divt-->
+												<div class="inputDiv lgDiv">
+													<select class="box" name="" id="">
+														<option value="">01</option>
+														<option value="">02</option>
+													</select>
+													<span class="messageBox"></span>
+												</div>
+												<!---Input Divt-->
+												<div class="inputDiv lgDiv">
+													<select class="box" name="" id="">
+														<option value="">2025</option>
+														<option value="">2024</option>
+													</select>
+													<span class="messageBox"></span>
+												</div>
+											</div>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv xsDiv">
+											<label for="">CVV</label>
+											<input type="text" id="cvv" name="cvv">
+											<span class="messageBox"></span>
+										</div>
+									</form>
+
+								</div>
+								<!---drop box Content-->
+
+							</div>
+							<!---drop box end-->
+							<!---drop box-->
+							<div class="dropBoxDiv paymentList">
+								<div class="list">
+									<input type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+									<a class="dropBox">
+										DEBIT CARD
+										<div>
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+										</div>
+									</a>
+								</div>
+
+								<!---drop box Content-->
+								<div class="dropBoxContentDiv">
+									<form
+										class="formDiv" action="">
+
+										<!---Input Divt-->
+										<div class="inputDiv lgDiv">
+											<select class="box" name="" id="">
+												<option value="">Select Bank</option>
+												<option value="">Bank</option>
+											</select>
+											<span class="messageBox"></span>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv smDiv">
+											<label for="">Name on Card</label>
+											<input type="text" id="cardName" name="card-name">
+											<span class="messageBox"></span>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv mdDiv">
+											<label for="">Card Number</label>
+											<input type="text" id="cardNumber" name="card-number">
+											<span class="messageBox"></span>
+										</div>
+										<div class="smDiv">
+											<label class="lgDiv" for="">Expiration date</label>
+											<div
+												style="display: flex;">
+												<!---Input Divt-->
+												<div class="inputDiv lgDiv">
+													<select class="box" name="" id="">
+														<option value="">01</option>
+														<option value="">02</option>
+													</select>
+													<span class="messageBox"></span>
+												</div>
+												<!---Input Divt-->
+												<div class="inputDiv lgDiv">
+													<select class="box" name="" id="">
+														<option value="">2025</option>
+														<option value="">2024</option>
+													</select>
+													<span class="messageBox"></span>
+												</div>
+											</div>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv xsDiv">
+											<label for="">CVV</label>
+											<input type="text" id="cvv" name="cvv">
+											<span class="messageBox"></span>
+										</div>
+									</form>
+
+								</div>
+								<!---drop box Content-->
+
+							</div>
+							<!---drop box end-->
+							<!---drop box-->
+							<div class="dropBoxDiv paymentList">
+								<div class="list">
+									<input type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+									<a class="dropBox">
+										NET BANKING
+										<div>
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+										</div>
+									</a>
+								</div>
+
+								<!---drop box Content-->
+								<div class="dropBoxContentDiv">
+									<form
+										class="formDiv" action="">
+
+										<!---Input Divt-->
+										<div class="inputDiv lgDiv">
+											<select class="box" name="" id="">
+												<option value="">Select Bank</option>
+												<option value="">Bank</option>
+											</select>
+											<span class="messageBox"></span>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv smDiv">
+											<label for="">Name on Card</label>
+											<input type="text" id="cardName" name="card-name">
+											<span class="messageBox"></span>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv mdDiv">
+											<label for="">Card Number</label>
+											<input type="text" id="cardNumber" name="card-number">
+											<span class="messageBox"></span>
+										</div>
+										<div class="smDiv">
+											<label class="lgDiv" for="">Expiration date</label>
+											<div
+												style="display: flex;">
+												<!---Input Divt-->
+												<div class="inputDiv lgDiv">
+													<select class="box" name="" id="">
+														<option value="">01</option>
+														<option value="">02</option>
+													</select>
+													<span class="messageBox"></span>
+												</div>
+												<!---Input Divt-->
+												<div class="inputDiv lgDiv">
+													<select class="box" name="" id="">
+														<option value="">2025</option>
+														<option value="">2024</option>
+													</select>
+													<span class="messageBox"></span>
+												</div>
+											</div>
+										</div>
+										<!---Input Divt-->
+										<div class="inputDiv xsDiv">
+											<label for="">CVV</label>
+											<input type="text" id="cvv" name="cvv">
+											<span class="messageBox"></span>
+										</div>
+									</form>
+
+								</div>
+								<!---drop box Content-->
+
+							</div>
+							<!---drop box end-->
+							<!---drop box-->
+							<div class="dropBoxDiv paymentList">
+								<div class="list">
+									<input type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+									<a class="dropBox">
+										PAYPAL
+										<div>
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+										</div>
+									</a>
+								</div>
+							</div>
+							<!---drop box end-->
+							<!---drop box-->
+							<div class="dropBoxDiv paymentList">
+								<div class="list">
+									<input type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+									<a class="dropBox">
+										CASH ON DELIVERY
+										<div>
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+										</div>
+									</a>
+								</div>
+							</div>
+							<!---drop box end-->
+						</div>
+					</div>
+				</div>
+				<h5>Delivery Estimates</h5>
+				<p class="smallText">Please Note: Dear Customers, our delivery timelines are currently longer than usual due
+																																																																																							            to the pandemic
+																																																																																							            situation going on right now.
+				</p>
+			</div>
+
+			<!---order Card Section-->
+			<div class="orderSub">
+				<div id="checkoutCard">
+					<ul>
+						<li>
+							<p>Cart Total</p>
+							<p>Rs 1099</p>
+						</li>
+						<li>
+							<p>Shipping Charges</p>
+							<p>FREE</p>
+						</li>
+						<span class="border"></span>
+						<li>
+							<h5>Totally Payable</h5>
+							<h5>Rs 1099</h5>
+						</li>
+					</ul>
+					<a href="/Order/payment" class="button button1">Proceed to Checkout</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!---product Container-->
+	<section class="productContainer section">
+		<div class="innerSection">
+			<h3 class="heading">Similar Products</h3>
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																									              adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic1.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																									              adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																									              adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</section>
+	<!------------------------Page Container Section End------------------------>
+	<!---Footer Section-->
+	<!--Main End-->
+		<script>
+$(document).ready(function () {
+$(".dropBox").on('click', function (e) {
+e.preventDefault();
+$(".dropBoxContentDiv").slideUp(300);
+var dropButton = $(this);
+if (dropButton.find(".dropBoxAddIcon").is(":hidden")) {
+dropButton.find(".dropBoxRemoveIcon").hide();
+dropButton.find(".dropBoxAddIcon").show();
+} else {
+$(".dropBoxAddIcon").show();
+$(".dropBoxRemoveIcon").hide();
+dropButton.closest(".dropBoxDiv").find(".dropBoxContentDiv").slideDown(300);
+dropButton.find(".dropBoxRemoveIcon").show();
+dropButton.find(".dropBoxAddIcon").hide();
+}
+
+});
+
+});
+</script>{% endblock %}

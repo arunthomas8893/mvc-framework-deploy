@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--Meta-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="charset=utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="description" content="">
+		<title>Comet & Stars</title>
+		<!--Favicon-->
+		<link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/image/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/image/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/image/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/image/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/image/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/image/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/image/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/image/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/image/favicon/ms-icon-144x144.png">
+		<meta
+		name="theme-color" content="#ffffff">
+		<!--css-->
+		<link rel="stylesheet" href="/scss/authentication.css?ver=1.3"/>
+		<link rel="stylesheet" href="/css/common.css?ver=1.3"/>
+		<link rel="stylesheet" href="/css/main.css?ver=1.3"/>
+		<link rel="stylesheet" href="/css/index.css?ver=1.3"/>
+		<link
+		rel="stylesheet" href="/css/page.css?ver=1.3"/>
+
+		<!--Link-->
+		<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+
+	</head>
+
+	<body>
+		<!--Main-->
+		<div
+			id="mainContainer" class="">
+			<!----Header Section-->
+			<header id="headerSection" class="section">
+				<a href="/" class="logoDiv"><img src="/image/logo.png" alt=""></a>
+				<!----Menu Icon-->
+				<div id="menuIcon">
+					<a href="/profile/profile"><img src="/image/icon/Profile.png" alt=""></a>
+					<a href=""><img src="/image/icon/Basket.png" alt=""></a>
+				</div>
+			</header>
+			<!----Header Section End-->
+			<!---------------------Page Container Section---------------->
+			<!---product Menu-->{% block body %}
+			{% endblock %}
+			<!------------------------Page Container Section End------------------------>
+			<!---Footer Section-->
+				<footer
+				id="footerSection" class="section"> <!---Main Section-->
+				<section
+					id="footerMainSection" class="innerSection">
+					<!--Footer List-->
+					<div class="footerList">
+						<a href="#">How Comet & Stars Work</a>
+						<a href="/faq">FAQ</a>
+					</div>
+					<!--Footer List-->
+					<div class="footerList">
+						<a href="/support">Support</a>
+						<a href="#">Site Map</a>
+					</div>
+
+					<!--Footer List-->
+					<div class="footerList">
+						<a href="/privacy-policy">Privacy Policy</a>
+						<a href="/termsAndConditions">Terms of Use</a>
+					</div>
+					<!--Footer List-->
+					<div class="footerList">
+						<a href="/returnAndRefundPolicy">Refund Policy</a>
+						<a href="#">Wallet Policy</a>
+					</div>
+				</section>
+				<!---Bottom Section-->
+				<div id="footerBottomSection">
+					<div id="bottomDiv" class="innerSection">
+						<div class="bottomList">
+							<p>2020 Comet & Stars | All rights reserved</p>
+						</div>
+					</div>
+					
+				</div>
+			</footer>
+
+			<!---Popup Section-->
+			<section class="popupSection">
+				<div
+					class="popup">
+					<!---Header-->
+					<div class="header"><img class="logo" src="/image/Main-Logo.png" alt="">
+						<div class="popupClose"><img src="/image/icon/close.png" alt=""></div>
+					</div>
+					<!---Content-->
+					<div class="content">
+						<h3>Your subscription submitted.</h3>
+						<div class="buttonSection">
+							<a href="/recipes.html" class="button button2">Explore Recipes</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!---Popup Section End-->
+		</div>
+		<!--Main End-->
+	</body>
+
+	<script>
+		$(document).ready(function () {
+$(".addRecipe").on('click', function (e) {
+e.preventDefault();
+$("#formContainer").addClass("formContainerIntro");
+});
+$(".closeForm").on('click', function (e) {
+e.preventDefault();
+$("#formContainer").removeClass("formContainerIntro");
+});
+$("#receipeSubmit").on('click', function (e) {
+e.preventDefault();
+$("#formContainer").removeClass("formContainerIntro");
+$(".popupSection").addClass("popupIntro");
+});
+$(".popupClose").on('click', function (e) {
+e.preventDefault();
+$(".popupSection").removeClass("popupIntro");
+});
+
+});
+
+$(document).ready(function () {
+var homePageSlides = $('.slide').length;
+var homePageSlideIndex = 1;
+homePageSlider();
+
+function homePageSlider() {
+setTimeout(() => {
+if (homePageSlideIndex < homePageSlides) {
+var distance = homePageSlideIndex * 100;
+var translate = 'translatex(-' + distance + '%)';
+$("#wallSlide").css('transform', translate);
+$('[homeSlideindex="' + homePageSlideIndex + '"]').removeClass("activeDrop");
+$('[homeSlideindex="' + (
+homePageSlideIndex + 1
+) + '"]').addClass("activeDrop");
+homePageSlideIndex = homePageSlideIndex + 1;
+} else {
+var translate = 'translatex(0%)';
+$("#wallSlide").css('transform', translate);
+$('[homeSlideindex="' + homePageSlides + '"]').removeClass("activeDrop");
+$('[homeSlideindex="1"]').addClass("activeDrop");
+homePageSlideIndex = 1;
+} homePageSlider();
+}, 4000);
+}
+});
+	</script>
+
+</html>

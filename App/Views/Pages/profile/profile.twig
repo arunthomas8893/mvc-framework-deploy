@@ -1,0 +1,275 @@
+{%  extends "base.twig" %}
+
+{% block body %}
+<!----Header Section End-->
+<!---------------------Page Container Section---------------->
+<!---Page Navigation-->
+<div id="pageNav" class="profilenav section">
+  <div class="innerSection">
+    <a href="/">Home</a><img src="/image/icon/Right arrow.png" alt="">
+    <a href="">Profile</a>
+  </div>
+</div>
+<!---profile Section-->
+<section id="profileSection" class="sectionContainer">
+  <div id="profileMainWrapper" class="innerSection">
+    <div id="profileMenu">
+      <a href="/" class="profileMenuNav"><img src="/image/icon/Left arrow.png" alt="">Back to Home</a>
+      <h5 class="userName">Hi <span>Robin</span>!</h5>
+      <ul class="menu">
+        <li class="activeList list" onclick="profileMenuDiv(0, event)">Account Management <img
+            src="/image/icon/Right arrow.png" alt=""></li>
+        <li class="list" onclick="profileMenuDiv(1, event)">Orders <img src="/image/icon/Right arrow.png" alt=""></li>
+        <li class="list" onclick="profileMenuDiv(2, event)">Reviews <img src="/image/icon/Right arrow.png" alt=""></li>
+        <li class="list" onclick="profileMenuDiv(3, event)">Referrals <img src="/image/icon/Right arrow.png" alt="">
+        </li>
+        <li class="list" onclick="profileMenuDiv(4, event)">Wallet <img src="/image/icon/Right arrow.png" alt=""></li>
+        <li class="list" onclick="profileMenuDiv(5, event)">Password Reset <img src="/image/icon/Right arrow.png"
+            alt="">
+        </li>
+        <li class="button button2">Log Out</li>
+      </ul>
+    </div>
+    <div id="profileContainer" class="profileContainerMargin">
+      <div class="profileMenuNav"><img src="/image/icon/Left arrow.png" alt="">Back to profile</div>
+      <div id="profileWrapper">
+        <!---Account Management-->
+        <div class="profileDiv">
+          <div class="titleDiv">
+            <h5 class="title">Personal Information</h5>
+            <a href="" class="subTitle">Edit <img src="/image/icon/edit.png" alt=""></a>
+          </div>
+          <!----->
+          <ul class="detailsList">
+            <li>
+              <p class="boldText">Name : </p>
+              <p>Robin Williams </p>
+            </li>
+            <li>
+              <p class="boldText">Email ID :</p>
+              <p>robinwilliams@hotmail.com </p>
+            </li>
+            <li>
+              <p class="boldText">Phone Number : </p>
+              <p>+91 95627 58455 </p>
+            </li>
+            <li>
+              <p class="boldText">Shipping Address :</p>
+              <p>XYZ House, Xyz Street, ZXY, India </p>
+            </li>
+            <li>
+              <p class="boldText">Billing Address:</p>
+              <p>XYZ House, Xyz Street, ZXY, India </p>
+            </li>
+          </ul>
+        </div>
+        <!---Orders-->
+        <div class="profileDiv">
+
+          <div class="orderList">
+            <h5 class="title">On the Way</h5>
+            <div class="list">
+              <div class="image">
+                <img src="/image/product/Pic1.png" alt="">
+              </div>
+              <ul class="content">
+                <li>
+                  <p class="text">Marshmellow T-Shirt Glow in the Dark Neque quisquam
+                    consectetur adipiscing</p>
+                  <p class="price">Rs <span>559</span></p>
+                </li>
+                <li>
+                  <a href="" class="buy">Buy Again</a>
+                  <a href="" class="cancel">Cancel Order</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="orderList">
+            <h5 class="title">Delivered on 18th May, 2020</h5>
+            <div class="list">
+              <div class="image">
+                <img src="/image/product/Pic1.png" alt="">
+              </div>
+              <ul class="content">
+                <li>
+                  <p class="text">Marshmellow T-Shirt Glow in the Dark Neque quisquam
+                    consectetur adipiscing</p>
+                  <p class="price">Rs <span>559</span></p>
+                </li>
+                <li>
+                  <a href="" class="buy">Buy Again</a>
+                  <a href="" class="buy">Report an Issue</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!---Reviews-->
+        <div class="profileDiv">
+
+          <div class="reviewList">
+            <h5 class="title">Marshmellow T-Shirt Glow in the Dark … </h5>
+            <div class="list">
+              <div class="image">
+                <img src="/image/product/Pic1.png" alt="">
+              </div>
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem adipisci cumque porro, facilis,
+                  quae
+                  illo nesciunt sapiente facere sed ex quod quaerat quidem alias, architecto accusamus repellat
+                  doloremque
+                  consequuntur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reviewList">
+            <h5 class="title">Marshmellow T-Shirt Glow in the Dark … </h5>
+            <div class="list">
+              <div class="image">
+                <img src="/image/product/Pic1.png" alt="">
+              </div>
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem adipisci cumque porro, facilis,
+                  quae
+                  illo nesciunt sapiente facere sed ex quod quaerat quidem alias, architecto accusamus repellat
+                  doloremque
+                  consequuntur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---Referrals-->
+        <div class="profileDiv">
+          <div class="titleDiv">
+            <h5 class="title">Total Points :<span>2400</span></h5>
+          </div>
+          <ul class="referralList">
+            <!---Referral Card-->
+            <li class="referralCard">
+              <div class="detailsDiv">
+                <div class="titleText">
+                  <h5>Marshmellow T-Shirt Glow in the Dark Neque
+                    quisquam consectetur adipiscing</h5>
+                  <a href=""><img src="/image/icon/copy-active.png" alt=""></a>
+                </div>
+                <div class="details">
+                  <p>No s:<span>222</span></p>
+                  <p>Referral Points <span>1200</span></p>
+                </div>
+              </div>
+              <div class="buttonDiv">
+                <div class="date">
+                  <p>Purchase Date : <span>12/12/2020</span></p>
+                  <p>Expiring in: <span class="days">3 days</span></p>
+                </div>
+                <a href="" class="button activeButton">Boost Now</a>
+              </div>
+              <div>
+
+              </div>
+            </li>
+            <!---Referral Card-->
+            <li class="referralCard">
+              <div class="detailsDiv">
+                <div class="titleText">
+                  <h5>Marshmellow T-Shirt Glow in the Dark Neque
+                    quisquam consectetur adipiscing</h5>
+                  <a href=""><img src="/image/icon/copy-active.png" alt=""></a>
+                </div>
+                <div class="details">
+                  <p>No s:<span>222</span></p>
+                  <p>Referral Points <span>1200</span></p>
+                </div>
+              </div>
+              <div class="buttonDiv">
+                <div class="date">
+                  <p>Purchase Date : <span>12/12/2020</span></p>
+                  <p>Expiring in: <span class="days">3 days</span></p>
+                </div>
+                <a href="" class="button inActiveButton">Boost Now</a>
+              </div>
+              <div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!---Wallet-->
+        <div class="profileDiv">
+          <div class="wallet">
+            <h5 class="text">Total Wallet Amount</h5>
+            <h5 class="price">500</h5>
+            <a href="" class="button redeemButton">Redeem</a>
+          </div>
+        </div>
+        <!---Password Reset-->
+        <div class="profileDiv">
+          <div class="titleDiv">
+            <h5 class="title">Change Password</h5>
+          </div>
+          <form action="" class="formDiv">
+            <div class="inputDiv lgDiv">
+              <label for="">Old Password :</label>
+              <input type="password" id="opass" name="opass">
+              <div class="messageBox"></div>
+            </div>
+            <div class="inputDiv lgDiv">
+              <label for="">New Password :</label>
+              <input type="password" id="npass" name="npass">
+              <div class="messageBox"> </div>
+            </div>
+            <div class="inputDiv lgDiv">
+              <label for="">Confirm Password :</label>
+              <input type="password" id="npass1" name="npass1">
+              <div class="messageBox"></div>
+            </div>
+            <button class="button button1" id="changePassword">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!------------------------Page Container Section End------------------------>
+<!---Footer Section-->
+<script>
+  $(document).ready(function () {
+    $(".list").on('click', function (e) {
+      e.preventDefault();
+      $("#profileMainWrapper").addClass("profileMainIntro");
+      $("#profileContainer").removeClass("profileContainerMargin");
+    });
+    $(".profileMenuNav").on('click', function (e) {
+      e.preventDefault();
+      $("#profileMainWrapper").removeClass("profileMainIntro");
+      $("#profileContainer").addClass("profileContainerMargin");
+    });
+  });
+
+  function profileMenuDiv(index, event) {
+    event.preventDefault();
+    document.querySelectorAll('.list').forEach(function (searchSuggestionTitle) {
+      searchSuggestionTitle.classList.remove('activeList');
+    });
+    event.target.classList.add('activeList');
+    var scrollValue = parseInt(index) * 100;
+    if (scrollValue > 0) {
+      scrollValue = '-' + scrollValue;
+    }
+    var profileMenuDivWrapper = document.getElementById('profileWrapper');
+    profileMenuDivWrapper.style.transition = 'transform .5s';
+    profileMenuDivWrapper.style.transform = 'translateX(' + scrollValue + '%)';
+    document.querySelectorAll('.profileDiv').forEach(function (section) {
+      section.style.height = '0';
+    });
+    document.querySelector('.profileDiv:nth-of-type(' + (
+      parseInt(index) + 1
+    ) + ')').style.height = 'auto';
+  }
+</script>
+{% endblock %}

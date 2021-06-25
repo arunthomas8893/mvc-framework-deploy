@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/image/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/image/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/image/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/image/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/image/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/image/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/image/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/image/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/image/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--css-->
+    <link rel="stylesheet" href="/css/common.css?ver=1.3" />
+    <link rel="stylesheet" href="/css/dashboard.css?ver=1.3" />
+    <link rel="stylesheet" href="/css/authentication.css?ver=1.3" />
+
+    <title>Nirapara - Admin</title>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+</head>
+
+<body>
+
+    <div id="mainContainer" class="page">
+       <!---authentication Section-->
+       <section class="authenticationContainer">
+        <a href="/" id="authenticationLogo"> <img src="/image/Main-Logo.png" alt=""></a>
+        <div class="authenticationSection">
+            <div class="authenticationDiv">
+                <h4 id="formTitle">Admin - Sign In</h4>
+                <form class="authenticationForm">
+                    <div class="inputDiv inputGroupDiv">
+                        <label for="mail">Email</label>
+                        <input class="authenticationFormInput" type="text" id="uid" name="uid" placeholder=""
+                            required>
+                        <div class="messageArea"></div>
+                    </div>
+                    <div class="inputDiv">
+                        <label for="password">Password</label>
+                        <div class="loginPasswordDiv passwordDiv">
+                            <input class="authenticationFormInput" type="text" id="password" name="password"
+                                placeholder="">
+                            <a href="/forget-password.html" class="forgotPasswordButton">
+                                Forgot?
+                            </a>
+                        </div>
+
+                    </div>
+                    <a href="#" id="LogIn" class="button button3">
+                        Sign In
+                    </a>
+                
+                    <div class="formSocialMediaDiv">
+
+                      <!---  <a href="/signup.html" class="authenticationText">New to Nirapara ? <span>Create an
+                                account</span> </a>-->
+                    </div>
+                </form>
+            </div>
+
+            </form>
+        </div>
+    </section>
+    <!---authentication Section end-->
+      
+
+    </div>
+</body>
+
+<script>
+    $('#LogIn').click(function (e) {
+        e.preventDefault();
+        var uid = $("#uid").val();
+        var password = $("#password").val();
+        var bt = $(this);
+        bt.hide("fast");
+        $("#errorMessageArea").html("");
+        if (uid != "" & password != "") {
+            $.post("/authentication/signin", {
+                uid: uid,
+                pass: password
+            }).done(function (result) {
+                processAjaxReturnData(result, {
+                    success: function (ajaxReturnData) {
+                        window.location = ajaxReturnData;
+                    },
+                    error: function (returnData) {
+                        if (returnData.response == 400) {
+                            showErrorMessage("Error", "Password and User ID not matching")
+                            bt.show("fast");
+                        } else {
+                            showErrorMessage("Error", returnData.message);
+                            bt.show("fast");
+                        }
+                    }
+                });
+            });
+        } else {
+            showErrorMessage("Error", 'Please enter Mobile number and OTP');
+        }
+    });
+</script>
+
+</html>

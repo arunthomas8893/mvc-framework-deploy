@@ -1,0 +1,250 @@
+{%  extends "base.twig" %}
+
+{% block body %}
+	<!----Header Section End-->
+	<!---------------------Page Container Section---------------->
+	<!----Order Container-->
+		<section id="orderContainer" class="section sectionContainer"> <div
+			class="innerSection">
+			<!---order main Section-->
+			<div class="orderMain">
+				<div id="orderNav">
+					<div class="navfill navMenu">Check Out</div>
+					<span></span>
+					<div class="navActive navMenu">Shipping</div>
+					<span></span>
+					<div class="navMenu">Payment</div>
+				</div>
+
+				<div
+					id="orderMainWrapper">
+					<!---Cart List-->
+					<div class="cartListSection orderDiv">
+						<div id="addressesContainer">
+
+							<div class="addressContainer">
+								<input
+								type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+								<!---drop box Section-->
+								<ul
+									class="dropBoxMainDiv">
+									<!---drop box-->
+									<li class="dropBoxDiv">
+										<a class="dropBox">ROBIN MATHEW,682315
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/plus.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/minus.png" alt="">
+										</a>
+
+										<!---drop box Content-->
+										<div class="dropBoxContentDiv alignLeft">
+											<div class="addressTable">
+												<div class="addressDiv">
+													<div class="addressTitle" style="padding-left:1rem">Address:</div>
+													<div class="addressValue" style="padding-left:1rem">
+														XYZ Apartment, ABC Lane Opposite
+																																																																																																																																																																																																																																																																																																																																																												                              Al-Khaleej squareu
+																																																																																																																																																																																																																																																																																																																																																												                              Dhabi</div>
+												</div>
+											</div>
+										</div>
+
+										<!---drop box Content-->
+									</li>
+									<!---drop box end-->
+									<!---drop box end-->
+
+								</ul>
+								<!---drop box Section end-->
+							</div>
+							<div class="addressContainer">
+								<input
+								type="radio" name="addressRadioButton" id="addressRadioButton" value="{{ i }}" class="checkboxDot addressRadioBt"/>
+								<!---drop box Section-->
+								<ul
+									class="dropBoxMainDiv">
+									<!---drop box-->
+									<li class="dropBoxDiv">
+										<a class="dropBox">ROBIN MATHEW,682315
+											<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/plus.png" alt="">
+											<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/minus.png" alt="">
+										</a>
+										<!---drop box Content-->
+										<div class="dropBoxContentDiv alignLeft">
+											<div class="addressTable">
+												<div class="addressDiv">
+													<div class="addressTitle" style="padding-left:1rem">Address:</div>
+													<div class="addressValue" style="padding-left:1rem">
+														XYZ Apartment, ABC Lane Opposite
+																																																																																																																																																																																																																																																																																																																																																												                              Al-Khaleej squareu
+																																																																																																																																																																																																																																																																																																																																																												                              Dhabi</div>
+												</div>
+											</div>
+										</div>
+
+										<!---drop box Content-->
+									</li>
+									<!---drop box end-->
+								</ul>
+								<!---drop box Section end-->
+							</div>
+							<div id="addressBottomDiv">
+								<div
+									class="buttonSection">
+
+									<!--Bottom Div-->
+									<div id="addAddressButton" class="addressContainer">
+										<input type="radio" name="addressRadioButton" id="addressRadioButton" value="new" class="checkboxDot addressRadioBt" style="opacity:0;"/>
+										<div id="addressRadioBt" class="button button2" onclick="showNewAddressForm()">
+											Add new address
+										</div>
+									</div>
+									<a href="" class="button button6">Edit address</a>
+								</div>
+								<!--Bottom Div-->
+								<div class="deliveryTime">
+									<h5 class="title">Estimated Delivery</h5>
+									<p class="date">Sunday, September 28, 2020</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!---order Card Section-->
+			<div class="orderSub">
+				<div id="checkoutCard">
+					<ul>
+						<li>
+							<p>Cart Total</p>
+							<p>Rs 1099</p>
+						</li>
+						<li>
+							<p>Shipping Charges</p>
+							<p>FREE</p>
+						</li>
+						<span class="border"></span>
+						<li>
+							<h5>Totally Payable</h5>
+							<h5>Rs 1099</h5>
+						</li>
+					</ul>
+					<a href="/Order/payment" class="button button1">Proceed to Checkout</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!---product Container-->
+	<section class="productContainer section">
+		<div
+			class="innerSection">
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																				              adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic1.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																				              adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																				              adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</section>
+	<!------------------------Page Container Section End------------------------>
+	<!---Footer Section-->
+
+	<!--Main End-->
+		<script>
+$(document).ready(function () {
+$(".dropBox").on('click', function (e) {
+e.preventDefault();
+$(".dropBoxContentDiv").slideUp(300);
+var dropButton = $(this);
+if (dropButton.find(".dropBoxAddIcon").is(":hidden")) {
+dropButton.find(".dropBoxRemoveIcon").hide();
+dropButton.find(".dropBoxAddIcon").show();
+} else {
+$(".dropBoxAddIcon").show();
+$(".dropBoxRemoveIcon").hide();
+dropButton.closest(".dropBoxDiv").find(".dropBoxContentDiv").slideDown(300);
+dropButton.find(".dropBoxRemoveIcon").show();
+dropButton.find(".dropBoxAddIcon").hide();
+}
+
+});
+
+});
+</script>{% endblock %}

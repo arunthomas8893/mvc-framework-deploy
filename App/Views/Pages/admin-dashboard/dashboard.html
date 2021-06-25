@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/image/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/image/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/image/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/image/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/image/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/image/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/image/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/image/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/image/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--css-->
+    <link rel="stylesheet" href="/css/common.css?ver=1.3" />
+    <link rel="stylesheet" href="/css/dashboard.css?ver=1.3" />
+    <link rel="stylesheet" href="/css/authentication.css?ver=1.3" />
+
+    <title>Nirapara - Admin</title>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+</head>
+
+<body>
+
+    <div id="mainContainer" class="page">
+        <!----Dashboard Container-->
+        <section id="dashboardContainer">
+            <!----Dashboard Menu-->
+            <div id="dashboardMenu">
+                <!--Dashboard Menu Header-->
+                <div id="dashboardMenuHeader">
+                    <a href="/" id="menuLogo"> <img src="/image/logo.png" alt=""></a>
+                </div>
+                <!--Dashboard Menu Container-->
+                <div id="dashboardMenuContainer">
+                    <!--Dashboard Menu List Div-->
+                    <div id="dashboardMenuListDiv">
+                        <div class="menuList"> <a class="activeList menuListLink">Dashboard</a>
+                            <div class="menuSubListDiv">
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 01</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 02</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 03</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 04</a>
+                            </div>
+                        </div>
+                        <div class="menuList"><a class="menuListLink">Products</a>
+                            <div class="menuSubListDiv">
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 01</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 02</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 03</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 04</a>
+                            </div>
+                        </div>
+                        <div class="menuList"><a class="menuListLink">Recipes</a>
+                            <div class="menuSubListDiv">
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 01</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 02</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 03</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 04</a>
+                            </div>
+                        </div>
+                        <div class="menuList"><a class="menuListLink">Blog</a>
+                            <div class="menuSubListDiv">
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 01</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 02</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 03</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 04</a>
+                            </div>
+                        </div>
+                        <div class="menuList"><a class="menuListLink">Contest</a>
+                            <div class="menuSubListDiv">
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 01</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 02</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 03</a>
+                                <a class="menuSubList" href="/dashboard.html">Sub Menu 04</a>
+                            </div>
+                        </div>
+                        <div class="menuList"><a class="menuListLink">Notification</a></div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!----Dashboard-->
+            <div id="dashboard">
+                <!----Dashboard Header-->
+                <div id="dashboardHeader">
+                    <!----Dashboard Header Div-->
+                    <div id="dashboardHeaderDiv">
+                        <div id="menuIconSection">
+                            <!----Menu Icon-->
+                            <div id="menuIcon">
+                                <div id="menuIconBarOne" class="menuIconBar menuBarOne"></div>
+                                <div id="menuIconBarOne" class="menuIconBar menuBarCenter"></div>
+                                <div id="menuIconBarTwo" class="menuIconBar menuBarTwo"></div>
+                            </div>
+                            <a id="mobLogo" href="/"><img src="/image/logo.png" alt=""></a>
+                        </div>
+                        <div></div>
+                        <div id="headerMenu">
+                            <!----Notification Div-->
+                            <div id="notificationIcon" class="dashboardHeaderList">
+                                <img src="/image/icon/dashboard/notification.png" alt="">
+                                <span class="notificationActive">8</span>
+                            </div>
+                            <!----Profile Icon-->
+                            <div id="profileIcon" class="dashboardHeaderList">
+                                <img src="/image/Testimonials.jpg" alt="">
+                            </div>
+                            <div id="profileDropDiv">
+                                <h5 class="profileDropName">Suresh Joseph Scaria</h5>
+                                <ul id="profileDropListDiv">
+                                    <li class="profileDropList"><a href=""> <img src="/image/icon/Serves.png"
+                                                alt="">Configure</a></li>
+                                    <li class="profileDropList"><a href=""> <img src="/image/icon/Time.png"
+                                                alt="">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----Dashboard Card Container-->
+                <div id="" class="dashboardCardContainer">
+                    <!--Dashboard Card Title Div-->
+                    <div class="dashboardCardTitleDiv">
+                        <!--Dashboard Card Title-->
+                        <p class="dashboardCardTitle">Dashboard</p>
+                    </div>
+                    <section class="lgDiv dashboardCard">
+                        <form class="formSection" action="">
+
+                            <!----------message area------->
+                            <div class="messageBox"></div>
+
+                            <div class="formDiv">
+                                <!---Input Div-->
+                                <div class="mdDiv inputDiv">
+                                    <label for="">Full Name</label>
+                                    <input type="text" id="fname" name="fname" value="" placeholder="">
+                                    <div class="messageBox"></div>
+                                </div>
+                                <!---Input Div-->
+                                <div class="mdDiv inputDiv">
+                                    <label for="">Mobile Number</label>
+                                    <input type="number" id="mobile" name="mobile" value="" placeholder="">
+                                    <div class="messageBox"></div>
+                                </div>
+                                <!---Input Div-->
+                                <div class="mdDiv inputDiv">
+                                    <label for="">Email Address</label>
+                                    <input type="text" id="mail" name="mail" value="" placeholder="">
+                                    <div class="messageBox"></div>
+                                </div>
+                                <!---Input Div-->
+                                <div class="mdDiv inputDiv box">
+                                    <label for="">Select</label>
+                                    <select id="" name="" value="">
+                                        <option value="">Option 1</option>
+                                        <option value="">Option 2</option>
+                                        <option value="">Option 3</option>
+                                        <option value="">Option 4</option>
+                                        <option value="">Option 5</option>
+                                    </select>
+                                    <div class="messageBox"></div>
+                                </div>
+
+                                <!---Input Div-->
+                                <div class="lgDiv inputDiv">
+                                    <label for="">Receipe Description</label>
+                                    <textarea type="text" id="receipe-description" name="receipe-description" value=""
+                                        placeholder=""></textarea>
+                                    <div class="messageBox"></div>
+                                </div>
+                                <!---Input Div-->
+                                <div class="lgDiv inputDiv">
+                                    <div class="imageDiv" style="padding-top: calc((9/16)*300px);">
+                                        <div class="iconDiv">
+                                            <img class="icon" src="/image/icon/attach.png" alt="">
+                                            <p class="text">Attach your pics here</p>
+                                        </div>
+                                        <input type="file" id="myFile" name="filename">
+                                    </div>
+                                    <div class="messageBox"></div>
+                                </div>
+                                <!----------message area------->
+                                <div class="messageBox"></div>
+
+                                <button id="" class="button button2">Submit</button>
+                                <!----------message area------->
+                                <div class="messageBox"></div>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="lgDiv dashboardCard dashboardTableContainer">
+                        <table class="dashboardTable">
+                            <tr>
+                                <th>sample</th>
+                                <th>sample</th>
+                                <th>sample</th>
+                                <th>sample</th>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+        <!----Dashboard Container End-->
+        <!---Popup Section-->
+        <section class="popupSection">
+            <div class="popup">
+                <!---Header-->
+                <div class="header"><img class="logo" src="/image/Main-Logo.png" alt="">
+                    <div class="popupClose"><img src="/image/icon/close.png" alt=""></div>
+                </div>
+                <!---Content-->
+                <div class="content">
+                    <h3>Your subscription submitted.</h3>
+                    <div class="buttonSection">
+                        <a href="/recipes.html" class="button button2">Explore Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---Popup Section End-->
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#menuIcon").on('click', function (e) {
+            e.preventDefault();
+            $("#dashboardMenu").toggleClass("dashboardMenuIntro");
+            $("#menuIcon").toggleClass("menuIconIntro");
+            $(".menuIconBar").toggleClass("menuIconBarInto");
+            $(".menuBarOne").toggleClass("menuBarOneIntro");
+            $(".menuBarTwo").toggleClass("menuBarTwoIntro");
+            $(".menuBarCenter").toggleClass("menuBarCenterIntro");
+            $("#menuSection").toggleClass("menuSectionIntro");
+        });
+        $("#servicesMenu").on('click', function (e) {
+            e.preventDefault();
+            $("#headerSection").toggleClass("headerSectionIntro");
+            $("#menuSubListDiv").toggleClass("menuSubListDivIntro");
+        });
+
+        $("#profileIcon").on('click', function (e) {
+            e.preventDefault();
+            $("#profileDropDiv").toggleClass("profileDropDivIntro");
+        });
+        $("#yearDiv").on('click', function (e) {
+            e.preventDefault();
+            $("#yearSelectDiv").toggleClass("yearSelectDivIntro");
+        });
+
+        $(".menuListLink").on('click', function (e) {
+            e.preventDefault();
+            var elem = $(this);
+            elem.closest(".menuList").find(".menuSubListDiv").toggleClass("menuSubListDivIntro");
+        });
+        $(".menuCard").on('click', function (e) {
+            e.preventDefault();
+            var elem = $(this);
+            $(this).toggleClass("menuCardIntro");
+            elem.closest(".menuCard").find(".menuCardSubListDiv").toggleClass(
+                "menuCardSubListDivIntro");
+        });
+        $("#receipeSubmit").on('click', function (e) {
+            e.preventDefault();
+            $("#formContainer").removeClass("formContainerIntro");
+            $(".popupSection").addClass("popupIntro");
+        });
+        $(".popupClose").on('click', function (e) {
+            e.preventDefault();
+            $(".popupSection").removeClass("popupIntro");
+        });
+    });
+
+</script>
+
+</html>

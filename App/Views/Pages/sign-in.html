@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <!--Meta-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta content="charset=utf-8" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="description" content="">
+ <title>Comet & Stars</title>
+ <!--Favicon-->
+ <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="/image/favicon/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="/image/favicon/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="/image/favicon/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="/image/favicon/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="/image/favicon/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="/image/favicon/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192" href="/image/favicon/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="/image/favicon/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+ <link rel="manifest" href="/image/favicon/manifest.json">
+ <meta name="msapplication-TileColor" content="#ffffff">
+ <meta name="msapplication-TileImage" content="/image/favicon/ms-icon-144x144.png">
+ <meta name="theme-color" content="#ffffff">
+ <!--css-->
+ <link rel="stylesheet" href="/css/common.css?ver=1.3" />
+ <link rel="stylesheet" href="/css/main.css?ver=1.3" />
+ <link rel="stylesheet" href="/css/index.css?ver=1.3" />
+ <link rel="stylesheet" href="/css/page.css?ver=1.3" />
+ <!--Link-->
+ <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+
+</head>
+
+<body>
+ <!--Main-->
+ <div id="mainContainer" class="">
+  <!---------------------Page Container Section---------------->
+
+  <!------------------------Page Container Section End------------------------>
+  <!---Footer Section-->
+  <!---Popup Section-->
+  <section class="popupSection">
+   <div class="popup">
+    <!---Header-->
+    <div class="header"><img class="logo" src="/image/Main-Logo.png" alt="">
+     <div class="popupClose"><img src="/image/icon/close.png" alt=""></div>
+    </div>
+    <!---Content-->
+    <div class="content">
+     <h3>Your subscription submitted.</h3>
+     <div class="buttonSection">
+      <a href="/recipes.html" class="button button2">Explore Recipes</a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!---Popup Section End-->
+ </div>
+ <!--Main End-->
+</body>
+<script>
+ $(document).ready(function () {
+  $(".dropBox").on('click', function (e) {
+   e.preventDefault();
+   $(".dropBoxContentDiv").slideUp(300);
+   var dropButton = $(this);
+   if (dropButton.find(".dropBoxAddIcon").is(":hidden")) {
+    dropButton.find(".dropBoxRemoveIcon").hide();
+    dropButton.find(".dropBoxAddIcon").show();
+   } else {
+    $(".dropBoxAddIcon").show();
+    $(".dropBoxRemoveIcon").hide();
+    dropButton.closest(".dropBoxDiv").find(".dropBoxContentDiv").slideDown(300);
+    dropButton.find(".dropBoxRemoveIcon").show();
+    dropButton.find(".dropBoxAddIcon").hide();
+   }
+
+  });
+
+ });
+</script>
+
+</html>

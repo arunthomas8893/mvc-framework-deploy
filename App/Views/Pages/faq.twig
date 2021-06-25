@@ -1,0 +1,120 @@
+{%  extends "base.twig" %}
+
+{% block body %}
+	<!----Header Section End-->
+	<!---------------------Page Container Section---------------->
+	<!---Page Navigation-->
+		<div id="pageNav" class="section"> <div class="innerSection">
+			<a href="/">Home</a><img src="/image/icon/Right arrow.png" alt="">
+			<a href="">FAQ’s</a>
+		</div>
+	</div>
+	<section id="listContainer" class="section sectionContainer">
+		<div class="innerSection">
+
+			<h3 class="title">
+				Frequently Asked Questions
+			</h3>
+			<!---drop box Section-->
+			<ul
+				class="dropBoxMainDiv">
+				<!---drop box-->
+				<li class="dropBoxDiv">
+					<a class="dropBox">What is Comet & Stars ?
+						<div>
+							<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/plus-gray.png" alt="">
+							<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/minus-gray.png" alt="">
+						</div>
+					</a>
+					<!---drop box Content-->
+					<div class="dropBoxContentDiv alignLeft">
+						<p>This Privacy Policy explains how Meezzaa.com collects, controls, processes, protects and uses information
+																				        about you (referred to as
+																				        ‘personal information’.) This is a legal document wherein Meezzaa.com will hereafter be referred to as ‘We’,
+																				        ‘Us’, ‘Our’ or ‘Website’ and the
+																				        Users and Customers will be referred to as ‘You’, ‘Your’, ‘Customers’ and ‘Users’.
+						</p>
+						<p>When we talk about the ‘Website’, we mean our platforms, which include our websites, mobile applications,
+																				        communications we send or
+																				        services we provide, social networking sites, or any other websites we offer that link to or reference this
+																				        Privacy Policy document.</p>
+					</div>
+					<!---drop box Content-->
+				</li>
+				<!---drop box end-->
+				<!---drop box-->
+				<li class="dropBoxDiv">
+					<a class="dropBox">How does the referral system work ?
+						<div>
+							<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/plus-gray.png" alt="">
+							<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/minus-gray.png" alt="">
+						</div>
+					</a>
+					<!---drop box Content-->
+					<div class="dropBoxContentDiv alignLeft">
+						<p>This Privacy Policy explains how Meezzaa.com collects, controls, processes, protects and uses information
+																				        about you (referred to as
+																				        ‘personal information’.) This is a legal document wherein Meezzaa.com will hereafter be referred to as ‘We’,
+																				        ‘Us’, ‘Our’ or ‘Website’ and the
+																				        Users and Customers will be referred to as ‘You’, ‘Your’, ‘Customers’ and ‘Users’.
+						</p>
+						<p>When we talk about the ‘Website’, we mean our platforms, which include our websites, mobile applications,
+																				        communications we send or
+																				        services we provide, social networking sites, or any other websites we offer that link to or reference this
+																				        Privacy Policy document.</p>
+					</div>
+					<!---drop box Content-->
+				</li>
+				<!---drop box end-->
+				<!---drop box-->
+				<li class="dropBoxDiv">
+					<a class="dropBox">What is Comet & Stars ?
+						<div>
+							<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/plus-gray.png" alt="">
+							<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/minus-gray.png" alt="">
+						</div>
+					</a>
+					<!---drop box Content-->
+					<div class="dropBoxContentDiv alignLeft">
+						<p>This Privacy Policy explains how Meezzaa.com collects, controls, processes, protects and uses information
+																				        about you (referred to as
+																				        ‘personal information’.) This is a legal document wherein Meezzaa.com will hereafter be referred to as ‘We’,
+																				        ‘Us’, ‘Our’ or ‘Website’ and the
+																				        Users and Customers will be referred to as ‘You’, ‘Your’, ‘Customers’ and ‘Users’.
+						</p>
+						<p>When we talk about the ‘Website’, we mean our platforms, which include our websites, mobile applications,
+																				        communications we send or
+																				        services we provide, social networking sites, or any other websites we offer that link to or reference this
+																				        Privacy Policy document.</p>
+					</div>
+					<!---drop box Content-->
+				</li>
+				<!---drop box end-->
+
+			</ul>
+		</div>
+	</section>
+	<!------------------------Page Container Section End------------------------>
+	<!---Footer Section-->
+	<script>
+		$(document).ready(function () {
+$(".dropBox").on('click', function (e) {
+e.preventDefault();
+$(".dropBoxContentDiv").slideUp(300);
+var dropButton = $(this);
+if (dropButton.find(".dropBoxAddIcon").is(":hidden")) {
+dropButton.find(".dropBoxRemoveIcon").hide();
+dropButton.find(".dropBoxAddIcon").show();
+} else {
+$(".dropBoxAddIcon").show();
+$(".dropBoxRemoveIcon").hide();
+dropButton.closest(".dropBoxDiv").find(".dropBoxContentDiv").slideDown(300);
+dropButton.find(".dropBoxRemoveIcon").show();
+dropButton.find(".dropBoxAddIcon").hide();
+}
+
+});
+
+});
+	</script>
+{% endblock %}

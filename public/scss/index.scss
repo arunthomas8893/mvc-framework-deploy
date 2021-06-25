@@ -1,0 +1,255 @@
+@import "_variables.scss";
+@import "_breakpoints.scss";
+@import "_functions.scss";
+
+/*product Menu*/
+#productMenu {
+    background-color: $lightGray;
+
+    .innerSection {
+        display: flex;
+
+        a {
+            flex: 1;
+            text-align: center;
+            padding: .3rem;
+            color: $darkGray;
+            font-size: $fontMob-1;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all .7s;
+
+            @include media-sm {
+                font-size: $baseline;
+                padding: .5rem;
+            }
+
+            &:hover {
+                color: $color1;
+            }
+        }
+    }
+}
+
+/*Wall Slide*/
+#wallSlideContainer {
+    overflow: hidden;
+
+    #wallSlide {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: $lgSpacing;
+        transition: all .7s;
+        animation-timing-function: ease-out;
+
+        .slide {
+            width: 100%;
+            min-width: 100%;
+            padding-top: calc((4/20)*100%);
+
+            @include media-sm {
+                padding-top: calc((3/20)*100%);
+            }
+
+            @include media-lg {
+                padding-top: calc((2/20)*100%);
+            }
+        }
+    }
+}
+
+/*product Container*/
+.productContainer {
+    margin-bottom: $lgSpacing;
+
+    .innerSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.productCard {
+    width: 48%;
+    min-width: 100px;
+    max-width: 350px;
+    margin-bottom: $lgSpacing;
+    cursor: pointer;
+    transition: all .3s;
+    animation-timing-function: ease-in;
+
+    @include media-md {
+        width: 30%;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    .image {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 13px 12px 5px rgba(0, 0, 0, 0);
+        cursor: pointer;
+        transition: all .5s;
+        animation-timing-function: ease-in;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .content {
+        .title {
+            color: $black;
+            font-size: $fontMob-1;
+            font-weight: 500;
+            margin-top: .8rem;
+            cursor: pointer;
+
+            @include media-xs {
+                font-size: $baseline;
+            }
+
+            @include media-sm {
+                font-size: $font-5;
+            }
+        }
+    }
+
+    .priceSection {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .8rem;
+
+        .priceDiv {
+            display: flex;
+            align-items: center;
+
+            .price {
+                color: $color1;
+                font-size: $fontMob-1;
+                font-weight: 700;
+                margin: 0;
+                margin-right: .3rem;
+
+                @include media-xs {
+                    font-size: $baseline;
+                }
+
+                @include media-sm {
+                    margin-right: 1rem;
+                }
+
+                @include media-md {
+                    font-size: $font-5;
+                }
+
+                @include media-lg {
+                    font-size: $font-4;
+                }
+            }
+
+            .oldPrice {
+                color: $textGray;
+                font-size: $fontMob-3;
+                font-weight: 400;
+                margin: 0;
+
+                @include media-xs {
+                    font-size: $fontMob-2;
+                }
+
+                @include media-md {
+                    font-size: $fontMob-1;
+                }
+
+                @include media-md {
+                    font-size: $baseline;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $textGray;
+
+                    @include media-xs {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+
+        .offer {
+            background-color: $color2;
+            padding: .5rem;
+            border-radius: .3rem;
+            color: $darkGray;
+            font-size: $fontMob-3;
+            font-weight: 500;
+
+            @include media-sm {
+                font-size: $fontMob-2;
+            }
+
+            @include media-md {
+                font-size: $fontMob-1;
+            }
+        }
+    }
+}
+
+/*video Banner*/
+.videoBanner {
+    margin-bottom: $lgSpacing;
+
+    .innerSection {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .contentDiv {
+        width: 100%;
+        text-align: center;
+
+        @include media-lg {
+            width: 50%;
+            text-align: left;
+        }
+
+        .bannerTitle {
+            color: $black;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .bannerSubTitle {
+            color: $color1;
+            font-weight: 400;
+            margin-top: 0;
+        }
+    }
+
+    .videoDiv {
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 2rem;
+
+        @include media-lg {
+            width: 50%;
+            margin: 0;
+            text-align: right;
+        }
+
+        .iframe {}
+    }
+}

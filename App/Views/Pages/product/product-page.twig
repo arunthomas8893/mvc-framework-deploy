@@ -1,0 +1,542 @@
+{%  extends "base.twig" %}
+
+{% block body %}
+	<!----Header Section End-->
+	<!---------------------Page Container Section---------------->
+
+	<!---Page Navigation-->
+		<div id="pageNav" class="section"> <div class="innerSection">
+			<a href="/">Home</a><img src="/image/icon/Right arrow.png" alt="">
+			<a href="">Dress for Men</a><img src="/image/icon/Right arrow.png" alt="">
+			<a href="/">Marshmello T-shirt</a>
+		</div>
+	</div>
+	<!---Product Details-->
+	<section id="productDetailsContainer" class="section">
+		<div class="innerSection">
+			<div
+				class="imageDiv">
+				<!---Slider-->
+				<div id="imageSlideWrapper">
+					<div class="slide">
+						<img src="/image/product/Pic2.png" alt=""></div>
+					<div class="slide">
+						<img src="/image/product/Pic1.png" alt=""></div>
+					<div class="slide">
+						<img src="/image/product/Pic2.png" alt=""></div>
+				</div>
+				<div class="arrowDiv">
+					<a class="arrow" onclick="sideScrollCards('imageSlideWrapper', 'slide', 'prev');"><img src="/image/icon/Left arrow.png" alt=""></a>
+					<div class="slideDropDiv">
+						<div class="activeDrop slideDrop" homeslideindex="1">
+							<span></span>
+						</div>
+						<div class="slideDrop" homeslideindex="2">
+							<span></span>
+						</div>
+						<div class="slideDrop" homeslideindex="3">
+							<span></span>
+						</div>
+						<div class="slideDrop" homeslideindex="4">
+							<span></span>
+						</div>
+					</div>
+					<a class="arrow" onclick="sideScrollCards('imageSlideWrapper', 'slide', 'next');"><img src="/image/icon/Right arrow.png" alt=""></a>
+				</div>
+			</div>
+			<div class="contentDiv">
+				<h3 class="title">Marshmellow T-Shirt Glow in the Dark Neque porro quisquam
+																																																																																																																																																						                        consectetur adipiscing</h3>
+				<div class="priceSection">
+					<div class="priceDiv">
+						<h3 class="price">Rs
+							<span>1205</span>
+						</h3>
+						<p class="oldPrice">Rs
+							<span>1400</span>
+						</p>
+					</div>
+					<div class="offer">
+						45% Off
+					</div>
+				</div>
+				<div class="stockDiv">
+					<h5 class="stock">In Stock</h5>
+					<h5 class="outStock">Out of Stock</h5>
+				</div>
+				<!---Size-->
+				<div class="optionSection">
+					<p>Size</p>
+					<div class="optionDiv">
+						<div class="option size">S</div>
+						<div class="option size">M</div>
+						<div class="option size">L</div>
+						<div class="option size">XL</div>
+					</div>
+				</div>
+				<!---Colors-->
+				<div class="optionSection">
+					<p>Colors</p>
+					<div class="optionDiv">
+						<a href="" class="option color">
+							<span></span>
+						</a>
+						<a href="" class="option color">
+							<span></span>
+						</a>
+						<a href="" class="option color">
+							<span></span>
+						</a>
+						<a href="" class="option color">
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="buttonSection">
+					<a href="/Order/cart" class="button button1">BUY NOW</a>
+					<a href="" class="button button2">ADD TO BASKET</a>
+				</div>
+				<!---drop box Section-->
+				<ul
+					class="dropBoxMainDiv productDetails">
+					<!---drop box-->
+					<li class="dropBoxDiv">
+						<a class="dropBox">Product Description
+							<div>
+								<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+								<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+							</div>
+						</a>
+						<!---drop box Content-->
+						<div class="dropBoxContentDiv alignLeft">
+							<p class="">Marshmellow T-Shirt Glow in the Dark Neque porro quisquam consectetur
+																																																																																																																																																																																																																																																                                    adipiscing</p>
+						</div>
+						<!---drop box Content-->
+
+					</li>
+					<!---drop box end-->
+
+					<!---drop box-->
+					<li class="dropBoxDiv">
+						<a class="dropBox">Product Details
+							<div>
+								<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+								<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+							</div>
+						</a>
+						<!---drop box Content-->
+						<div class="dropBoxContentDiv alignLeft">
+							<div class="serviceCardContent lgDiv serviceSubCardContainer">
+								<p class="">Marshmellow T-Shirt Glow in the Dark Neque porro quisquam consectetur
+																																																																																																																																																																																																																																																																														                                        adipiscing</p>
+							</div>
+						</div>
+						<!---drop box Content-->
+
+					</li>
+					<!---drop box end-->
+					<!---drop box-->
+					<li class="dropBoxDiv">
+						<a class="dropBox">User Reviews
+							<div>
+								<img class="dropDownIcon dropBoxIcon dropBoxAddIcon" src="/image/icon/Drop Down Open.png" alt="">
+								<img class="dropDownIcon dropBoxIcon dropBoxRemoveIcon" src="/image/icon/Drop Down Open.png" alt="">
+							</div>
+						</a>
+						<!---drop box Content-->
+						<div class="dropBoxContentDiv alignLeft">
+							<div class="serviceCardContent lgDiv serviceSubCardContainer">
+								<p class="">Marshmellow T-Shirt Glow in the Dark Neque porro quisquam consectetur
+																																																																																																																																																																																																																																																																														                                        adipiscing</p>
+							</div>
+						</div>
+						<!---drop box Content-->
+
+					</li>
+					<!---drop box end-->
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!---product Container-->
+	<section class="productContainer section">
+		<div class="innerSection">
+			<h3 class="heading">Similar Products</h3>
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																																																				                            adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic1.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																																																				                            adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consecte adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</section>
+
+	<!---product Container-->
+	<section class="productContainer section">
+		<div class="innerSection">
+			<h3 class="heading">People have also Bought</h3>
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic1.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic1.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic1.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																																																				                            adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!---Product Card-->
+			<a
+				href="/Product/product-page" class="productCard">
+				<!---Image-->
+				<div class="image">
+					<img src="/image/product/Pic2.png" alt="">
+				</div>
+				<!---Content-->
+				<div class="content">
+					<h4 class="title">Neque porro quisquam consectetur
+																																																																																																																																																																																				                            adipiscing</h4>
+					<div class="priceSection">
+						<div class="priceDiv">
+							<h3 class="price">Rs
+								<span>1205</span>
+							</h3>
+							<p class="oldPrice">Rs
+								<span>1400</span>
+							</p>
+						</div>
+						<div class="offer">
+							45% Off
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</section>
+	<!------------------------Page Container Section End------------------------>
+	<!---Footer Section-->
+
+	<script>
+		/* function for sliding cards*/
+function sideScrollCards(elementWrapper, cardCalss, direction, increment = 1, adjustMaxDistanceWidth = false) {
+var slideIndex = elementWrapper + 'Index';
+window[slideIndex] = (typeof window[slideIndex] != 'undefined') ? window[slideIndex] : 0;
+var cardCalssList = document.getElementsByClassName(cardCalss);
+var wrapperDiv = document.getElementById(elementWrapper);
+wrapperDiv.style.transition = 'transform 0.6s ease';
+var cardNos = cardCalssList.length;
+var cardWidth = cardCalssList[0].offsetWidth;
+var distanceToTransalte = 0;
+var wrapperWidth = wrapperDiv.offsetWidth;
+if (direction === 'prev') {
+window[slideIndex] = (window[slideIndex] > 0) ? window[slideIndex] - increment : 0;
+} else if (direction === 'next') {
+window[slideIndex] = (window[slideIndex] < cardNos) ? window[slideIndex] + increment : 0;
+}
+window[slideIndex] = (window[slideIndex] > (cardNos - 1)) ? 0 : window[slideIndex];
+distanceToTransalte = window[slideIndex] * cardWidth;
+var maxDistanceToTranslate = parseInt(wrapperWidth) + parseInt(cardWidth);
+if (adjustMaxDistanceWidth) {
+distanceToTransalte = (wrapperWidth < distanceToTransalte) ? maxDistanceToTranslate : distanceToTransalte;
+window[slideIndex] = (wrapperWidth < distanceToTransalte) ? 0 : window[slideIndex];
+}
+
+distanceToTransalte = (distanceToTransalte === 0) ? 0 : '-' + distanceToTransalte;
+wrapperDiv.style.transform = 'translateX(' + distanceToTransalte + 'px)';
+}
+
+$(document).ready(function () {
+$(".dropBox").on('click', function (e) {
+e.preventDefault();
+$(".dropBoxContentDiv").slideUp(300);
+var dropButton = $(this);
+if (dropButton.find(".dropBoxAddIcon").is(":hidden")) {
+dropButton.find(".dropBoxRemoveIcon").hide();
+dropButton.find(".dropBoxAddIcon").show();
+} else {
+$(".dropBoxAddIcon").show();
+$(".dropBoxRemoveIcon").hide();
+dropButton.closest(".dropBoxDiv").find(".dropBoxContentDiv").slideDown(300);
+dropButton.find(".dropBoxRemoveIcon").show();
+dropButton.find(".dropBoxAddIcon").hide();
+}
+
+});
+
+});
+	</script>
+{% endblock %}

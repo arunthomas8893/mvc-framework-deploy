@@ -1,0 +1,56 @@
+{%  extends "base.twig" %}
+
+{% block body %}
+	<!----Header Section End-->
+	<!---------------------Page Container Section---------------->
+	<!---Page Navigation-->
+		<div id="pageNav" class="section"> <div class="innerSection">
+			<a href="/">Home</a><img src="/image/icon/Right arrow.png" alt="">
+			<a href="">Support</a>
+		</div>
+	</div>
+	<section id="supportContainer" class="section">
+		<div class="innerSection">
+			<div class="contentDiv">
+				<h3 class="title">Support</h3>
+				<ul>
+					<li>WhatsApp : +91 98765 43215
+					</li>
+					<li>Customer Care : +91 98765 43215, 0484 5623458
+					</li>
+				</ul>
+			</div>
+			<div class="contentDiv">
+				<h3 class="title">Enquiry Form
+				</h3>
+				<form action="" class="formDiv">
+					<div class="inputDiv lgDiv">
+						<label for="">Name :</label>
+						<input type="text" id="name" name="name">
+						<div class="messageBox"></div>
+					</div>
+					<div class="inputDiv lgDiv">
+						<label for="">Email :</label>
+						<input type="text" id="email" name="email">
+						<div class="messageBox"></div>
+					</div>
+					<div class="inputDiv lgDiv">
+						<label for="">Subject :</label>
+						<input type="text" id="subject" name="subject">
+						<div class="messageBox"></div>
+					</div>
+					<div class="inputDiv lgDiv">
+						<label for="">Content :</label>
+						<textarea name="content" id="content"></textarea>
+						<div class="messageBox"></div>
+					</div>
+					<button class="button button1" id="">
+						Submit
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!------------------------Page Container Section End------------------------>
+	<!---Footer Section-->
+{% endblock %}

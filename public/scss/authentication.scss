@@ -1,0 +1,456 @@
+@import "_variables.scss";
+@import "_breakpoints.scss";
+@import "_functions.scss";
+
+.messageBox {
+    width: 100%;
+    display: block;
+    font-size: $fontMob-1;
+    font-weight: 400;
+    padding: .5rem 0;
+}
+
+.alert {
+    color: $red;
+}
+
+.success {
+    color: $green;
+}
+
+.warning {
+    color: $yellow;
+}
+
+.info {
+    color: $textGray;
+}
+
+.buttonSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(5px);
+    }
+}
+
+.button1 {
+    color: $white;
+    background-color: $color1;
+}
+
+.button2 {
+    color: $color1;
+    background-color: $white;
+    border: 1px solid $color1;
+}
+
+.button3 {
+    color: $white;
+    background-color: $black;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+}
+
+.button4 {
+    color: $white;
+    background-color: $color1;
+}
+
+.button5 {
+    color: $gray;
+    background-color: $borderGray;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+}
+
+.button6 {
+    color: $gray;
+    background-color: $white;
+    border: 1px solid $borderGray;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+}
+
+.formSection {
+
+    .closeForm {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55px;
+        padding: 1rem;
+        cursor: pointer;
+
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+.formDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lgDiv {
+    width: 100%;
+}
+
+.mdDiv {
+    width: 100%;
+
+    @include media-lg {
+        width: 48.5%;
+    }
+}
+
+.smDiv {
+    width: 48.5%;
+
+    @include media-lg {
+        width: 23%;
+    }
+}
+
+.xsDiv {
+    width: 10%;
+}
+
+
+
+    .iconDiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            width: 50px;
+        }
+
+        .text {
+            font-size: $fontMob-1;
+            color: $textGray;
+        }
+
+    input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+}
+
+label {
+    display: block;
+    color: $gray;
+    font-size: $fontMob-1;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.inputDiv {
+
+    input,
+    textarea {
+        width: 100%;
+        padding: .5rem 1rem;
+        font-size: $baseline;
+        font-family: inherit;
+        font-weight: 400;
+        background-color: $white;
+        border-radius: .3rem;
+        border: 1px solid $textGray;
+        cursor: pointer;
+        transition: all .3s;
+
+        ::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &::placeholder {
+            font-size: $fontMob-1;
+            color: $textGray;
+            font-family: inherit;
+        }
+
+        &:hover {
+            background-color: $white;
+            border: 1px solid $darkGray;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+        &:active {
+            background-color: $white;
+            border: 1px solid $darkGray;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+        &:focus {
+            background-color: $white;
+            border: 1px solid $darkGray;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+        &:visited {
+            background-color: $white;
+            border: 1px solid $darkGray;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            background-color: $gray;
+        }
+    }
+
+    textarea {
+        min-height: 100px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.box {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        right: 0;
+        z-index: 1;
+        width: 25px;
+        max-width: 25px;
+        min-width: 25px;
+        height: 35px;
+        margin-right: 5px;
+        text-align: center;
+        font-size: $fontMob-1;
+        color: $textGray;
+        background-color: $lightGray;
+        background-image: url(../image/icon/downarrow-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+    }
+
+    &:hover::before {
+        color: $textGray;
+        background-color: $white;
+    }
+
+    &:active::before {
+        color: $textGray;
+        background-color: $white;
+    }
+
+    &:focus::before {
+        color: $textGray;
+        background-color: $white;
+    }
+
+    &:visited::before {
+        color: $textGray;
+        background-color: $white;
+    }
+}
+
+select {
+    background-color: $white;
+    border: 1px solid $textGray;
+    color: $darkGray;
+    padding: .5rem;
+    font-family: inherit;
+    font-size: $baseline;
+    font-weight: 400;
+    letter-spacing: .2px;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: .3rem;
+    overflow: hidden;
+
+    &:hover {
+        background-color: $white;
+        border: 1px solid $textGray;
+
+        &::placeholder {
+            color: $black;
+        }
+    }
+
+    &:active {
+        background-color: $white;
+        border: 1px solid $textGray;
+
+        &::placeholder {
+            color: $black;
+        }
+    }
+
+    &:focus {
+        background-color: $white;
+        border: 1px solid $textGray;
+
+        &::placeholder {
+            color: $black;
+        }
+    }
+
+    &:visited {
+        background-color: $white;
+        border: 1px solid $darkGray;
+
+        &::placeholder {
+            color: $black;
+        }
+    }
+
+    option {
+        padding: 30px;
+        background-color: $white;
+        border: 1px solid $lightGray;
+
+        &:hover {
+            font-size: $baseline;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+        }
+    }
+}
+
+.dropDownInputDiv {
+    margin-bottom: 1rem;
+
+    .dropDownInput {
+        background-color: $lightGray;
+        border-radius: .3rem;
+
+        &:hover {
+            background-color: $white;
+            border: 1px solid $darkGray;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+
+        &:active {
+            background-color: $white;
+            border: 1px solid $darkGray;
+
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+        input {
+            color: $textGray;
+            background-color: transparent;
+
+            &::placeholder {
+                font-size: $fontMob-1;
+                font-weight: 400;
+                color: $textGray;
+                font-family: inherit;
+            }
+        }
+    }
+
+    .dropDownBox {
+        top: 50px;
+        position: absolute !important;
+
+        .dropDownList {
+            font-size: $fontMob-1;
+            color: $textGray;
+            border-bottom: 1px solid $lightGray;
+        }
+    }
+}
+
+.mainDetails {
+    width: 100%;
+
+    @include media-lg {
+        width: 30%;
+    }
+}
+
+.additionalDetails {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-lg {
+        width: 70%;
+        padding-left: 1rem;
+    }
+}

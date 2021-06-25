@@ -1,0 +1,848 @@
+@import "_variables.scss";
+@import "_breakpoints.scss";
+@import "_functions.scss";
+
+/*Main Container*/
+#mainContainer {
+    margin-top: 0 !important;
+}
+
+
+.heading {
+    color: $darkGray;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  /*page animation end*/
+  
+  #mainContainer {
+    width: 100%;
+    overflow: hidden;
+    background-color: $white;
+  
+    //header Section//
+    ///menu Icon//
+    #menuIconSection {
+      display: flex;
+      align-items: center;
+      height: 100%;
+  
+      @include media-md {
+        display: none;
+      }
+    }
+  
+    #mobLogo{
+      width: 5rem;
+      margin-left: 1rem;
+      @include media-sm {
+        width: 7rem;
+      }
+      @include media-md {
+        display: none;
+      }
+    }
+    #menuIcon {
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: all .3s;
+      z-index: 999;
+  
+      @include media-sm {
+        width: 40px;
+      }
+  
+      @include media-lg {
+        display: none;
+      }
+  
+      .menuIconBarInto {
+        background-color: $darkGray !important;
+      }
+  
+      .menuIconBar {
+        background-color: $darkGray;
+        border-radius: 20px;
+        width: 100%;
+        height: 2px;
+        margin: 3px 0;
+        animation-timing-function: ease-in-out;
+        transition: all .5s;
+      }
+  
+      .menuBarOne {
+        transform: none;
+      }
+  
+      .menuBarOneIntro {
+        transform: rotate(45deg) translate(2px, 2px);
+        margin: 0 !important;
+        width: 80%;
+        background-color: $color1;
+  
+        @include media-sm {
+          transform: rotate(45deg) translate(2px, 2px);
+        }
+      }
+  
+      .menuBarCenter {
+        opacity: 1;
+        transform: none;
+        transition: transform .1s opacity .2s !important;
+      }
+  
+      .menuBarCenterIntro {
+        opacity: 0 !important;
+        transform: translateX(10px);
+      }
+  
+      .menuBarTwo {
+        transform: none;
+      }
+  
+      .menuBarTwoIntro {
+        transform: rotate(-45deg)translate(4px, -5px);
+        margin: 0 !important;
+        width: 80%;
+        background-color: $white;
+  
+        @include media-sm {
+          transform: rotate(-45deg)translate(4px, -5px);
+        }
+      }
+    }
+  
+    //header Section End//
+}
+/*Dashboard Container*/
+#dashboardContainer {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: $offWhite;
+    display: flex;
+
+    /*Dashboard Menu*/
+    .dashboardMenuIntro {
+        transform: none !important;
+    }
+
+    #dashboardMenu {
+        width: 80%;
+        max-width: 200px;
+        min-width: 200px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: $white;
+        border-right: 1px solid $borderGray;
+        transform: translateX(-100%);
+        transition: all 0.3s;
+
+        @include media-md {
+            height: auto;
+            transform: none !important;
+            position: relative;
+        }
+
+        /*Dashboard Menu Header*/
+        #dashboardMenuHeader {
+            width: 100%;
+            padding: 1.4rem;
+            padding-left: 2rem;
+            background-color: $white;
+            @include media-md {
+                padding-top: 1.5rem;
+            }
+            #menuLogo {
+                display: block;
+                margin-left: 2rem;
+                width: 6rem;
+                @include media-md {
+                    margin: 0;
+                }
+            }
+            #date {
+                display: none;
+
+                @include media-md {
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: $fontMob-2;
+                    color: $gray;
+                    margin: .3rem 0;
+                }
+            }
+        }
+
+        #dashboardMenuContainer {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            height: 100%;
+            margin-top: 2rem;
+            #dashboardMenuListDiv {
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+                .activeList{
+                    background-color: $offWhite !important;
+                    color: $color1 !important;
+                }
+                .menuList {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: $baseline;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    @include media-md {
+                        font-size: $fontSmall;
+                    }
+.menuListLink{
+    width: 100%;
+    padding: .75rem;
+    padding-left: 2rem;
+    color: $gray;
+    transition: all .3s;
+    &:hover {
+        background-color: $offWhite;
+        color: $color1;
+    }
+}
+                    .menuListIcon {
+                        width: 15px;
+                        margin-right: 1rem;
+                    }
+                }
+                .menuSubListDivIntro{
+                    height: auto !important;
+                    .menuSubList{
+                        padding: .5rem 0 !important;
+                    }
+                }
+                .menuSubListDiv{
+                    width: 100%;
+                    height: 0;
+                    background-color: $offWhite;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    transition: all .3s;
+                   
+                    .menuSubList{
+                        font-size: $fontMob-1;
+                        font-weight: 500;
+                        color: $gray;
+padding: 0;
+padding-left: 2rem !important;
+transition: all .3s;
+cursor: pointer;
+&:hover{
+    background-color: $lightGray;
+    color: $color1;
+}
+                    }
+                }
+            }
+        }
+    }
+
+    /*Dashboard*/
+    #dashboard {
+        flex: 1;
+        width: 80%;
+
+        /*Dashboard Header*/
+        .dashboardHeaderMain {
+            display: none !important;
+            @include media-md {
+                display: flex !important;
+            }
+        }
+        #dashboardHeader {
+            width: 100%;
+            padding: .5rem 1rem;
+            background-color: $white;
+            border-bottom: 1px solid $borderGray;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include media-md {
+            }
+
+            @include media-lg {
+                justify-content: space-between;
+            }
+            /*Dashboard Header Div*/
+            #dashboardHeaderDiv {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                min-width: 100%;
+                order: 1;
+                @include media-md {
+                    order: 2;
+                }
+                #headerMenu{
+                    display: flex;
+                    align-items: center;
+                }
+                .dashboardHeaderList {
+                    margin-left:1rem;
+                    cursor: pointer;
+                    @include media-sm {
+                        margin-left: 2rem;
+                    }
+                }
+
+                /*Notification Div*/
+                #notificationIcon {
+                    display: none;
+
+                    @include media-md {
+                        width: 20px;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                    &:hover{
+                        .notificationActive { 
+                            font-size: $fontMob-1; 
+                            padding: .3rem;
+                        }
+                    }
+                }
+
+                .notificationActive {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 12;
+                    font-size: $fontMob-3;
+                    color: $white;
+                    padding: .1rem;
+                    background-color: $color1;
+                    border-radius: 100%;
+                    transition: all .3s;
+                }
+
+                /*Year Div*/
+                #yearDiv {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    #yearDivTitle {
+                        display: flex;
+                        align-items: center;
+                        font-size: $fontMob-2;
+                        margin: 0;
+
+                        img {
+                            width: 10px;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    #year {
+                        font-size: $fontMob-1;
+                        margin-top: 0.3rem;
+                    }
+                }
+
+                .yearSelectDivIntro {
+                    transform: none !important;
+                }
+
+                #yearSelectDiv {
+                    position: fixed;
+                    top: 4.3rem;
+                    right: 5%;
+                    z-index: 10;
+                    background-color: $white;
+                    border: 1px solid $borderGray;
+                    padding: 1rem;
+                    transform: translateY(-200%);
+                    transition: all 0.3s;
+
+                    #yearSelectDivTitle {
+                        display: flex;
+                        align-items: center;
+                        font-size: $fontMob-2;
+                        margin: 0;
+
+                        img {
+                            width: 10px;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    #yearSelectBox {
+                        display: flex;
+
+                        select {
+                            font-family: $fontFamily;
+                            padding: 0.5rem;
+                            color: $darkGray;
+                            background-color: $white;
+                            border: 1px solid $borderGray;
+                            border: 0.3rem;
+                        }
+                    }
+                }
+
+                /*Profile Icon*/
+                #profileIcon {
+                    width: 35px;
+                    height: 35px;
+                    overflow: hidden;
+                    border-radius: 100%;
+                    border: 1px solid $borderGray;
+                }
+
+                .profileDropDivIntro {
+                    transform: none !important;
+                }
+
+                #profileDropDiv {
+                    position: fixed;
+                    top: 4.2rem;
+                    right: 0;
+                    z-index: 10;
+                    background-color: $white;
+                    border: 1px solid $borderGray;
+                    padding: 2rem;
+                    transform: translateX(100%);
+                    transition: all 0.3s;
+
+                    .profileDropName {
+                        color: $color1;
+                        margin: 0;
+                    }
+
+                    .profileDropText {
+                    }
+
+                    #profileDropListDiv {
+                        margin-top: 1rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        .profileDropList {
+                            display: flex;
+                            align-items: center;
+                            font-size: $fontMob-1;
+                            padding: 0.5rem 0;
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            img {
+                                width: 15px;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*Dashboard Card Container*/
+        .dashboardCardTitle {
+            color: $color1;
+            font-size: $baseline;
+            font-weight: 600;
+            margin-top: 0;
+        
+        }
+
+        .dashboardCardContainer {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: auto;
+            overflow: auto;
+            overflow-x: hidden;
+            padding: 1rem;
+            /*Dashboard Card Title Div*/
+           #titleDiv{
+               padding: 0;
+               background-color: $white;
+           }
+            .dashboardCardTitleDiv {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+
+                @include media-sm {
+                    flex-direction: row;
+                    align-items: center;
+                }
+                @include media-md {
+flex-wrap: nowrap;
+                }
+                
+                .moreOption {
+                    padding: .5rem;
+                    background-color: $borderGray;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    @include media-sm {
+                        padding: .5rem 1rem;
+                        border-radius: 1rem;
+                    }
+                    @include media-xl {
+                        display: none;
+                    }
+                    img{
+                        width: 15px;
+                        @include media-sm {
+                            display: none !important;
+                        }
+                    }
+                    p {
+                        display: none;
+                        @include media-sm {          
+                            display: block !important;
+                            font-size: $fontMob-1;
+                            margin: 0; }
+                    }
+                }
+              
+            }
+            /*Dashboard Card*/
+.dashboardCard{
+    background-color: $white;
+    padding: 1rem;
+  height: 80vh;
+    overflow: auto;
+    &::-webkit-scrollbar {
+    opacity: 0;
+      }
+}
+.lgDiv{
+    width: 100%;
+}
+.mdDiv{
+   width: 49%;
+}
+.smDiv{
+  width: 24%;
+}
+
+        }
+    }
+}
+
+/*Other Style Dashboard */
+
+.dashboardTableContainer{
+
+    width: auto;
+    overflow: hidden;
+    overflow-x: auto;
+.dashboardTable{
+    border: 1px solid $lightGray;
+  
+    border-collapse: collapse;
+  width: 100%;
+  min-width: 100%;
+  overflow-x: auto;
+  th, td {
+      height: 3rem;
+      min-height:3rem;
+      min-width: 150px;
+    text-align: left;
+    padding:.5rem;
+    color: $darkGray;
+    font-size: $fontMob-1;
+    font-weight: 500;
+    border: 1px solid $borderGray;
+  }
+  
+  tr:nth-child(even){
+      background-color: $offWhite}
+  
+  th {
+      color: $darkGray;
+      font-weight: 600;
+      
+  }
+}}
+
+//authentication styles//
+.authenticationContainer{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding: 2rem 0;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #authenticationLogo{
+        width: 6rem;
+        margin-bottom: 1rem;
+    }
+    .authenticationSection{
+        width: 90%;
+        max-width: 400px;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        @include media-xs {
+            width: 80%;
+           }
+          @include media-md {
+            width: 50%;
+           }
+.authenticationDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    background-color: $white;
+border: 1px solid $borderGray;
+border-radius: 3px;
+    @include media-xs {
+        padding:2rem;
+       }
+
+    #formTitle{
+        color: $darkGray;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .authenticationForm{
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        #otpMainDiv{
+            display: none; 
+           }
+        .inputDiv{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            label{
+                font-size: $fontMob-1;
+                color: $gray;
+                font-weight: 400;
+                margin-bottom: .5rem;
+            }
+            .emailDiv{
+                display: flex;
+                flex-direction: column;
+                @include media-sm {
+                  flex-direction: row;
+                   }
+                .resendButton{
+                    display: none;
+                }
+.emailButton{
+    height: 100%;
+    min-width: 110px;
+    text-align: center;
+    font-size: $fontMob-1;
+    font-weight: 600;
+    background-color: $lightGray;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-bottom: .5rem;
+    @include media-sm {
+       margin: 0;
+         }
+    &:hover{
+        background-color: $borderGray;
+    }
+}
+           }
+
+           .otpDiv{
+            display: flex;
+
+            .otpButton{
+                height: 100%;
+                min-width: 110px;
+                text-align: center;
+                font-size: $fontMob-1;
+                font-weight: 600;
+                background-color: $color1;
+                color: $white;
+                padding: .5rem 1rem;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: all .3s;
+                &:hover{
+                    background-color: $borderGray;
+                    color: $darkGray;
+                }
+            } 
+        }
+        }
+        .authenticationFormInput{
+            background: none;
+            width: 100%;
+            font-family: $fontFamily;
+            color: $darkGray;
+            font-size: $fontMob-1;
+            letter-spacing: 1px;
+            font-weight: 400;
+            border: none;
+            border: 1px solid $borderGray;
+            border-radius: .2rem;
+            padding: .5rem;
+            margin-bottom: 1rem;
+        }
+        .button{
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .loginPasswordDiv{
+            flex-direction: row !important;
+        }
+        .passwordDiv{
+            display: flex;
+            flex-direction: column;
+            padding: .5rem;
+            border: 1px solid $borderGray;
+            border-radius: .2rem;
+            margin-bottom: 1rem;
+            input{
+                padding: 0;
+                margin: 0;
+                border: none;
+            }
+            .forgotPasswordButton{
+                margin-left: 1rem;
+                color: $darkGray;
+                font-family: inherit;
+                font-size: $fontMob-2;
+                letter-spacing: 1px;
+                font-weight: 700;
+                background: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+            .passwordShowMainDiv{
+                width: 100%;
+                display: flex;
+            #passwordShowDiv{
+                cursor: pointer;
+                .passwordShow{
+
+                }
+                .passwordHide{
+
+                }
+                .showIntro{
+                    display: block !important;
+                }
+                img{
+                    display: none;
+                    width: 20px;
+                    transition: all .3s;
+                    &:hover{
+                        opacity: .4;
+                    }
+                }
+            }}
+        }
+
+}
+
+
+
+}
+.formText{
+    margin: 0;
+    margin-bottom: .5rem;
+    font-size: $fontMob-1;
+    text-align: center;
+    font-weight: 400;
+    color: $textGray;
+}
+
+.authenticationText{
+    display: block;
+color: $gray;
+font-size: $fontMob-1;
+letter-spacing: 1.5px;
+font-weight: 400;
+text-align: center;
+margin-top: 1rem;
+span{
+    color: $color1;
+    letter-spacing: 1.5px;
+    transition: all .3s;
+&:hover{
+    opacity: .5;
+}
+}
+}
+#smButtonDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    .smButton{
+        width: 100%;
+        padding: 1rem .5rem;
+        margin: .5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $borderGray;
+        border-radius: .1rem;
+        color: $textGray;
+        font-size: $fontMob-1;
+        font-weight: 400;
+        letter-spacing: 1px;
+        transition: all .3s;
+        cursor: pointer;
+        @include media-sm {
+            padding: 1rem;
+           }
+        &:hover{
+            color: $gray;
+        }
+img{
+    width: 20px;
+    margin-right: 1rem;
+}
+    }
+}
+    }
+}
